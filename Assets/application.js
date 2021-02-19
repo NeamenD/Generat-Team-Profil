@@ -2,10 +2,10 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/engineer.js");
 const Intern = require("./lib/intern.js");
 const Manager = require("./lib/manager.js");
-var uniqueId = 0;
-var teamArray = [];
 
-// will need to have separate inquirer prompts depending on role etc. 
+
+
+
 
 
 
@@ -90,13 +90,13 @@ function promptUser(answers) {
                 }
             ]).then(function (managerRes) {
                 var newManager = new Manager(managerRes.name, managerRes.email, uniqueId, managerRes.office);
-                uniqueId = uniqueId + 1; // could be "uniqueId++"
+                uniqueId = uniqueId + 1;
                 console.log(newManager);
                 teamArray.push(newManager);
                 addUser();
             });
         };
-        // should use switch case instead of if/else up until this point
+        
 
     })
         .catch(function (err) {
