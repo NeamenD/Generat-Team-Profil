@@ -22,7 +22,7 @@ async function promptUser(answers) {
                     name: "Alec",
                     message: "What is your name?",
                     type: "input"
-                    console.log("Engineer")
+                
                 },
                 
                 {
